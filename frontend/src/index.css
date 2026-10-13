@@ -1,0 +1,157 @@
+/* ProjectPulse Global Styles & Theme tokens */
+
+:root {
+  --primary-navy: #0f172a;
+  --secondary-blue: #2563eb;
+  --accent-blue-hover: #1d4ed8;
+  --bg-slate: #f8fafc;
+  --card-border: #e2e8f0;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --radius-card: 16px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-slate);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Custom Primary Overrides */
+.btn-primary {
+  background-color: var(--secondary-blue) !important;
+  border-color: var(--secondary-blue) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent-blue-hover) !important;
+  border-color: var(--accent-blue-hover) !important;
+}
+
+.btn-outline-primary {
+  color: var(--secondary-blue) !important;
+  border-color: var(--secondary-blue) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--secondary-blue) !important;
+  color: #ffffff !important;
+}
+
+.text-primary {
+  color: var(--secondary-blue) !important;
+}
+
+.bg-primary {
+  background-color: var(--secondary-blue) !important;
+}
+
+/* Transitions & Micro-Interactions */
+.transition-all {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08) !important;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08) !important;
+}
+
+.hover-primary:hover {
+  color: var(--secondary-blue) !important;
+}
+
+.hover-sidebar-item:hover {
+  background-color: #f1f5f9;
+  color: var(--primary-navy) !important;
+}
+
+/* Typography Helpers */
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.shadow-xs {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.max-w-700 {
+  max-width: 700px;
+}
+
+/* Sidebar Responsive Styles */
+@media (max-width: 991.98px) {
+  .sidebar-container {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1040;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .sidebar-closed {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-open {
+    transform: translateX(0);
+  }
+}
+
+.z-index-backdrop {
+  z-index: 1030;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
